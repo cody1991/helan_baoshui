@@ -262,7 +262,7 @@ const TaxFiling = () => {
             },
             {
               title: '第四步：填写 Box 1 — 工资 + 房产',
-              description: '确认工资和 30% Ruling；填写 WOZ 值、房贷信息；如有出租收入则申报',
+              description: '确认工资和 30% Ruling；填写 WOZ 值、房贷信息',
               icon: <FormOutlined />,
             },
             {
