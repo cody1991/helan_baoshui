@@ -87,18 +87,7 @@ const TipsAndResources = () => {
                 </div>
               ),
             },
-            {
-              color: 'green',
-              children: (
-                <div>
-                  <h4>6. 厘清地址出租的税务处理</h4>
-                  <p>
-                    如果你收取了租金且在免税额内（€5,881），在报税系统中选择 Kamerverhuurvrijstelling。
-                    和 2024 年保持一致处理方式。
-                  </p>
-                </div>
-              ),
-            },
+
           ]}
         />
 
@@ -111,7 +100,6 @@ const TipsAndResources = () => {
             { text: '下载 ING 房贷年度报告（利息总额）', done: false },
             { text: '确认 WOZ 值（2025.1.1 基准日）', done: false },
             { text: '准备银行余额（2025.1.1）', done: false },
-            { text: '确认租金收入金额和处理方式', done: false },
             { text: '开始填写 Aangifte 2025', done: false },
             { text: 'Box 1：确认工资和 30% Ruling', done: false },
             { text: 'Box 1：填写自住房（WOZ + 房贷利息）', done: false },

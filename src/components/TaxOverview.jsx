@@ -37,7 +37,7 @@ const TaxOverview = () => {
       key: '1',
       box: 'Box 1',
       name: '工作与住房收入',
-      content: '工资收入、自住房收益/抵扣（Eigenwoningforfait + 房贷利息抵扣）、租金收入',
+      content: '工资收入、自住房收益/抵扣（Eigenwoningforfait + 房贷利息抵扣）',
       rate: '35.82% / 49.50%',
       color: 'blue',
       relevance: '主要相关',

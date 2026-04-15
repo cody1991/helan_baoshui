@@ -16,8 +16,7 @@ const TaxCalculation = () => {
     { key: '6', step: 'Eigenwoningforfait（全年）', amount: '+€910', note: 'WOZ €260k × 0.35%' },
     { key: '7', step: '房贷利息抵扣（11 个月）', amount: '-€7,333', note: '€200k × 4% × 11/12' },
     { key: '8', step: '房产净影响', amount: '-€6,423', note: '利息抵扣远大于虚拟收入' },
-    { key: '9', step: '租金收入（假设免税额内）', amount: '+€0', note: 'Kamerverhuurvrijstelling' },
-    { key: '10', step: 'Box 1 应税总收入', amount: '≈€43,160', note: '' },
+    { key: '9', step: 'Box 1 应税总收入', amount: '≈€43,160', note: '' },
   ];
 
   const taxCalc = [
@@ -174,7 +173,6 @@ const TaxCalculation = () => {
           message="重要提醒"
           description={
             <ul style={{ paddingLeft: 20, marginBottom: 0 }}>
-              <li>以上计算未考虑可能的租金收入（如超过免税额）</li>
               <li>实际 Loonheffing（预扣税）金额取决于雇主的月度计算和 30%→20% 切换时点</li>
               <li>如果你选择「部分非居民纳税人」身份，Algemene heffingskorting 可能受限</li>
               <li>Box 3 税额未包含在上述计算中（如果你有超过免征额的荷兰资产）</li>

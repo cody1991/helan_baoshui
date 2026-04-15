@@ -80,64 +80,6 @@ const HousingTax = () => {
         />
       ),
     },
-    {
-      key: '3',
-      label: '「地址租给别人」的具体税务处理',
-      children: (
-        <div>
-          <Alert
-            message="这是你情况中最需要注意的部分"
-            type="error"
-            showIcon
-            style={{ marginBottom: 16 }}
-          />
-          <Title level={5}>情况一：出租部分房间（实际有人住）</Title>
-          <Paragraph>
-            如果你将 50 平方米中的部分（比如一间卧室）出租给他人实际居住：
-          </Paragraph>
-          <ul style={{ paddingLeft: 20 }}>
-            <li>
-              <strong>「kamerverhuurvrijstelling（房间出租免税额）」：</strong>
-              2025 年，如果出租房间的年租金不超过约 <Text className="amount">€5,881</Text>（以税务局最终公布为准），则租金收入完全免税
-            </li>
-            <li>你必须是自住（Hoofdbewoner）</li>
-            <li>超过免税额的部分，属于 Box 1 收入</li>
-          </ul>
-
-          <Divider />
-
-          <Title level={5}>情况二：只出租地址注册（BRP registratie）</Title>
-          <Paragraph>
-            如果只是让别人注册地址但不实际居住在你的房子里：
-          </Paragraph>
-          <div className="danger-box">
-            <p><WarningOutlined style={{ color: '#ff4d4f', marginRight: 8 }} />
-              <strong>严重警告：</strong>这在荷兰属于地址欺诈（Adresfraude），是违法行为。</p>
-            <ul style={{ paddingLeft: 20, marginTop: 8 }}>
-              <li>市政府（Gemeente）可处以罚款</li>
-              <li>可能影响你的居留许可</li>
-              <li>如果对方利用你的地址骗取福利，你可能承担连带责任</li>
-              <li><strong>强烈建议不要这样做</strong></li>
-            </ul>
-          </div>
-
-          <Divider />
-
-          <Title level={5}>情况三：合法出租部分并收取租金</Title>
-          <Paragraph>如果在合理范围内出租房屋的一部分：</Paragraph>
-          <ul style={{ paddingLeft: 20 }}>
-            <li>房贷利息抵扣 <strong>不受影响</strong>（只要你仍以此为主要住所）</li>
-            <li>Eigenwoningforfait 按全额计算</li>
-            <li>租金收入在免税额内不需额外缴税</li>
-          </ul>
-          <div className="highlight-box" style={{ marginTop: 12 }}>
-            <strong>2025 年报税操作：</strong>在 Box 1「Eigen woning」部分，有一项
-            「Kamerverhuurvrijstelling」，如果你的租金收入在免税额内，在这里选「是」即可。
-            如果你 2024 年的税务顾问也这样处理了，保持一致即可。
-          </div>
-        </div>
-      ),
-    },
   ];
 
   return (

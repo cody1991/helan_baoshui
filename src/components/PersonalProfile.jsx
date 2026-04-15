@@ -61,32 +61,11 @@ const PersonalProfile = () => {
             <Tag color="orange">ING</Tag>
             2025.2 起还贷（11 个月利息可抵扣）
           </Descriptions.Item>
-          <Descriptions.Item label="地址出租">
-            <Tag color="red">是 - 需特别注意</Tag>
-          </Descriptions.Item>
           <Descriptions.Item label="报税方式">
             <Tag color="blue">自行报税</Tag>
             2024 年由专人处理，2025 年首次自报
           </Descriptions.Item>
         </Descriptions>
-
-        <Alert
-          style={{ marginTop: 16 }}
-          message="重要提示：地址出租的税务影响"
-          description={
-            <div>
-              <p>你独自居住但将地址（BRP 注册地址）租给了别人，这涉及几个关键问题：</p>
-              <ul style={{ marginTop: 8, paddingLeft: 20 }}>
-                <li><strong>如果是出租房间/部分房屋：</strong>你仍然是「Hoofdbewoner（主要居住者）」，房贷利息仍可在 Box 1 抵扣，但租金收入需要申报</li>
-                <li><strong>如果只是让别人注册地址（不实际居住）：</strong>这在荷兰可能涉及地址欺诈（Adresfraude），建议谨慎处理</li>
-                <li><strong>税务上：</strong>收到的租金属于应税收入，需如实申报</li>
-              </ul>
-            </div>
-          }
-          type="warning"
-          showIcon
-          icon={<WarningOutlined />}
-        />
 
         <Row gutter={16} style={{ marginTop: 24 }}>
           <Col xs={24} sm={8}>

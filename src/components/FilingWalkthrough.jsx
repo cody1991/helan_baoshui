@@ -235,24 +235,6 @@ const FilingWalkthrough = () => {
             ]}
           />
 
-          <Divider />
-          <Title level={5}>4c. 出租部分（Kamerverhuur）</Title>
-          <Table
-            pagination={false}
-            bordered
-            size="small"
-            columns={[
-              { title: '字段', dataIndex: 'field', key: 'field', width: 280, render: (t) => <Text strong>{t}</Text> },
-              { title: '中文含义', dataIndex: 'meaning', key: 'meaning' },
-              { title: '你应该填什么', dataIndex: 'value', key: 'value' },
-              { title: '建议', dataIndex: 'tip', key: 'tip' },
-            ]}
-            dataSource={[
-              { key: '1', field: 'Verhuurt u (een deel van) uw woning?', meaning: '你是否出租了（部分）房屋？', value: '如果收取了租金，选 "Ja"', tip: '和 2024 年保持一致' },
-              { key: '2', field: 'Kamerverhuurvrijstelling', meaning: '房间出租免税', value: '如果年租金 ≤ €5,881，选择 "Ja, ik maak gebruik van de vrijstelling"', tip: '选了免税后，租金不需要额外缴税' },
-              { key: '3', field: 'Ontvangen huur', meaning: '收到的租金总额', value: '填写 2025 年全年收到的租金', tip: '如果在免税额内，这里填了也不影响税额' },
-            ]}
-          />
           <div className="success-box" style={{ marginTop: 12 }}>
             <strong>Eigen Woning 填写完成后的效果：</strong>
             <p>系统会自动计算：Eigenwoningforfait（+€910）- 房贷利息抵扣（-€7,333）= <strong>净减少应税收入约 €6,423</strong></p>

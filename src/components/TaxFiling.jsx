@@ -20,8 +20,7 @@ const TaxFiling = () => {
     { key: '6', doc: '银行存款余额（2025.1.1 & 2025.12.31）', source: '银行 App/Statement', box: 'Box 3', required: true, note: '若选部分非居民，仅需荷兰银行' },
     { key: '7', doc: '30% Ruling 批准函', source: '税务局 Belastingdienst', box: 'Box 1', required: true, note: '确认仍在有效期内' },
     { key: '8', doc: '健康保险年度报告', source: '保险公司', box: '—', required: false, note: '' },
-    { key: '9', doc: '租金收入记录（如有）', source: '自行记录', box: 'Box 1', required: true, note: '记录每月租金金额' },
-    { key: '10', doc: '2024 年报税副本', source: '税务顾问 / Belastingdienst', box: '参考', required: false, note: '对照去年填法，保持一致' },
+    { key: '9', doc: '2024 年报税副本', source: '税务顾问 / Belastingdienst', box: '参考', required: false, note: '对照去年填法，保持一致' },
   ];
 
   const docColumns = [
@@ -86,7 +85,6 @@ const TaxFiling = () => {
                 <li>填写 WOZ 值（用 2025.1.1 基准日的值）</li>
                 <li>填写房贷余额、年利息支出（从 ING Jaaroverzicht 获取）</li>
                 <li>系统自动计算 Eigenwoningforfait</li>
-                <li>如有出租房间：选择 Kamerverhuurvrijstelling</li>
               </ul>
             </li>
             <li>
@@ -146,7 +144,6 @@ const TaxFiling = () => {
                     <li>✅ 荷兰在线系统会预填大部分数据</li>
                     <li>✅ 主要需要填写的就是房产+30% Ruling</li>
                     <li>⚠️ 需注意 30%→20% 过渡的免税额计算</li>
-                    <li>⚠️ 地址出租部分需小心处理</li>
                   </ul>
                 </div>
               </Card>
