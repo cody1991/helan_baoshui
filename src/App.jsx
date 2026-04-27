@@ -102,6 +102,7 @@ const App = () => {
               <ThirtyPercentRuling />
               <HousingTax />
               <TaxFiling />
+              <FilingWalkthrough />
               <TaxCalculation />
               <TipsAndResources />
             </div>

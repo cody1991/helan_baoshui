@@ -14,31 +14,31 @@ const TaxCalculation = () => {
     { key: '4', step: '免税津贴合计', amount: '-€20,417', note: '' },
     { key: '5', step: '应税工资', amount: '€49,583', note: '' },
     { key: '6', step: 'Eigenwoningforfait（全年）', amount: '+€910', note: 'WOZ €260k × 0.35%' },
-    { key: '7', step: '房贷利息抵扣（11 个月）', amount: '-€7,333', note: '€200k × 4% × 11/12' },
-    { key: '8', step: '房产净影响', amount: '-€6,423', note: '利息抵扣远大于虚拟收入' },
-    { key: '9', step: 'Box 1 应税总收入', amount: '≈€43,160', note: '' },
+    { key: '7', step: '房贷利息抵扣（实际已付）', amount: '-€8,000', note: '示例值；报税以 ING Jaaroverzicht 2025 为准' },
+    { key: '8', step: '房产净影响', amount: '-€7,090', note: '利息抵扣远大于虚拟收入' },
+    { key: '9', step: 'Box 1 应税总收入', amount: '≈€42,493', note: '' },
   ];
 
   const taxCalc = [
     { key: '1', step: '第一档税（€0 - €38,441 × 35.82%）', amount: '≈€13,770', note: '' },
-    { key: '2', step: '第二档税（€38,441 - €43,160 × 37.48%）', amount: '≈€1,768', note: '' },
-    { key: '3', step: 'Box 1 税额小计', amount: '≈€15,538', note: '' },
+    { key: '2', step: '第二档税（€38,441 - €42,493 × 37.48%）', amount: '≈€1,519', note: '' },
+    { key: '3', step: 'Box 1 税额小计', amount: '≈€15,289', note: '' },
     { key: '4', step: 'Algemene heffingskorting（100%）', amount: '-€3,068', note: '完整年度，不再按比例' },
     { key: '5', step: 'Arbeidskorting（100%）', amount: '-€5,599', note: '完整年度' },
-    { key: '6', step: '最终应缴税额', amount: '≈€6,871', note: '' },
+    { key: '6', step: '最终应缴税额', amount: '≈€6,622', note: '' },
     { key: '7', step: '已预扣税额（Loonheffing，假设）', amount: '≈€10,000', note: '雇主每月代扣' },
-    { key: '8', step: '退税 / 补税', amount: '≈退税 €3,129', note: '' },
+    { key: '8', step: '退税 / 补税', amount: '≈退税 €3,378', note: '' },
   ];
 
   const compareData = [
     { key: '1', item: '纳税天数', y2024: '275 天（部分年度）', y2025: '365 天（完整年度）' },
     { key: '2', item: '30% Ruling', y2024: '全年 30%', y2025: '11 月 30% + 1 月 20%' },
     { key: '3', item: '免税津贴', y2024: '≈€21,000（按实际月份）', y2025: '≈€20,417' },
-    { key: '4', item: '房贷利息抵扣', y2024: '€0（未开始还贷）', y2025: '≈-€7,333（11 个月）' },
+    { key: '4', item: '房贷利息抵扣', y2024: '€0（2024 申报口径）', y2025: '按 ING 年度报告实际金额（示例 ≈-€8,000）' },
     { key: '5', item: 'Eigenwoningforfait', y2024: '+€74（1 个月）', y2025: '+€910（全年）' },
-    { key: '6', item: '房产净影响', y2024: '+€74', y2025: '-€6,423（大幅减税！）' },
+    { key: '6', item: '房产净影响', y2024: '+€74', y2025: '示例 -€7,090（大幅减税！）' },
     { key: '7', item: 'Heffingskorting', y2024: '按 75.1% 比例', y2025: '100% 完整享受' },
-    { key: '8', item: '预计退税', y2024: '≈€532', y2025: '≈€3,129' },
+    { key: '8', item: '预计退税', y2024: '≈€532', y2025: '示例 ≈€3,378' },
   ];
 
   const colColumns = [
@@ -122,7 +122,7 @@ const TaxCalculation = () => {
             <Card style={{ textAlign: 'center', background: '#f0f5ff', borderColor: '#adc6ff' }}>
               <Statistic
                 title="房产净减税"
-                value={6423}
+                value={7090}
                 prefix="€"
                 valueStyle={{ color: '#2f54eb' }}
               />
@@ -132,7 +132,7 @@ const TaxCalculation = () => {
             <Card style={{ textAlign: 'center', background: '#fff7e6', borderColor: '#ffd591' }}>
               <Statistic
                 title="预计退税"
-                value={3129}
+                value={3378}
                 prefix="≈€"
                 valueStyle={{ color: '#fa8c16' }}
               />
@@ -164,8 +164,8 @@ const TaxCalculation = () => {
 
         <div className="success-box" style={{ marginTop: 16 }}>
           <strong>结论：</strong>虽然 2025 年 30% Ruling 免税额略有下降（年末降为 20%），
-          但房贷利息抵扣（约 -€7,333）和完整的 Heffingskorting 使得整体退税额<strong>大幅增加</strong>。
-          预计退税从 2024 年的约 €532 提升至 2025 年的约 <Text className="amount-green">€3,129</Text>。
+          但房贷利息抵扣（以 ING Jaaroverzicht 2025 实际金额为准）和完整的 Heffingskorting 使得整体退税额<strong>大幅增加</strong>。
+          按示例利息 €8,000 估算，预计退税从 2024 年的约 €532 提升至 2025 年的约 <Text className="amount-green">€3,378</Text>。
         </div>
 
         <Alert

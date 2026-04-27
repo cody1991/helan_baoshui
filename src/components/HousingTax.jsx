@@ -19,8 +19,8 @@ const HousingTax = () => {
     { key: '1', item: '房贷总额（假设）', value: '€200,000' },
     { key: '2', item: 'ING 利率（假设）', value: '4.0%' },
     { key: '3', item: '月供中利息部分（初期近似）', value: '≈€667/月' },
-    { key: '4', item: '2025 年可抵扣月份', value: '11 个月（2025.2 - 2025.12）' },
-    { key: '5', item: '2025 年可抵扣利息合计', value: '≈€7,333' },
+    { key: '4', item: '2025 年可抵扣范围', value: '2025 年实际已支付的房贷利息' },
+    { key: '5', item: '2025 年可抵扣利息合计', value: '以 ING Jaaroverzicht 2025 为准（示例约 €8,000）' },
   ];
 
   const colColumns = [
@@ -90,7 +90,7 @@ const HousingTax = () => {
           <span>
             <HomeOutlined style={{ marginRight: 8, color: '#e05206' }} />
             房产相关税务（2025 税年）
-            <span className="personal-tag">完整年度 + 11 个月房贷</span>
+            <span className="personal-tag">完整年度 + 实际房贷利息</span>
           </span>
         }
       >
@@ -101,8 +101,8 @@ const HousingTax = () => {
               <p>2025 年是你持有房产的<strong>第一个完整年度</strong>，也是房贷利息抵扣的重要一年：</p>
               <ul style={{ paddingLeft: 20, marginBottom: 0 }}>
                 <li>Eigenwoningforfait：<strong>全年 12 个月</strong>（2024 年只算了 1 个月）</li>
-                <li>房贷利息抵扣：<strong>11 个月</strong>（2025.2 - 12），2024 年为 0</li>
-                <li>净效果：房贷利息抵扣远大于 Eigenwoningforfait，<strong>整体大幅减税</strong></li>
+                <li>房贷利息抵扣：以 <strong>ING Jaaroverzicht 2025</strong> 上的实际已付利息为准，首期可能包含前期结算利息</li>
+                <li>净效果：房贷利息抵扣通常远大于 Eigenwoningforfait，<strong>整体大幅减税</strong></li>
               </ul>
             </div>
           }
@@ -129,8 +129,8 @@ const HousingTax = () => {
         <Divider>房贷利息抵扣（Hypotheekrenteaftrek）</Divider>
 
         <Paragraph>
-          自住房的房贷利息可以在 <strong>Box 1</strong> 中抵扣。2025 年你有 11 个月的利息可以抵扣，
-          这将是你最大的税收减免项之一。
+          自住房的房贷利息可以在 <strong>Box 1</strong> 中抵扣。你是 2024.12 购房、2025.2 开始还款，
+          因此首期还款可能包含购房后到首次扣款前的结算利息；2025 年抵扣额应以 <strong>ING Jaaroverzicht 2025</strong> 的实际已付利息总额为准。
         </Paragraph>
 
         <Table
@@ -147,9 +147,9 @@ const HousingTax = () => {
           <br />
           Eigenwoningforfait: +€910（虚拟收入）
           <br />
-          房贷利息抵扣: <span className="amount-green">-€7,333</span>（11 个月利息）
+          房贷利息抵扣: <span className="amount-green">按 ING 年度报告实际金额</span>（示例约 €8,000）
           <br />
-          <strong>净影响: <span className="amount-green">-€6,423</span></strong>（减少应税收入，显著减税！）
+          <strong>净影响: <span className="amount-green">约 -€7,090</span></strong>（以实际利息为准，减少应税收入）
         </div>
 
         <Divider>数字概览</Divider>
@@ -158,12 +158,12 @@ const HousingTax = () => {
           <Col xs={24} sm={8}>
             <Card>
               <Statistic
-                title="年利息支出（11 个月）"
-                value={7333}
-                prefix="€"
+                title="年利息支出（实际）"
+                value={8000}
+                prefix="≈€"
                 valueStyle={{ color: '#e05206' }}
               />
-              <div style={{ color: '#999', fontSize: 12 }}>假设贷款 €200k, 利率 4%</div>
+              <div style={{ color: '#999', fontSize: 12 }}>示例值；报税用 ING Jaaroverzicht</div>
             </Card>
           </Col>
           <Col xs={24} sm={8}>
@@ -181,11 +181,11 @@ const HousingTax = () => {
             <Card>
               <Statistic
                 title="净抵扣效果"
-                value={6423}
-                prefix="-€"
+                value={7090}
+                prefix="≈-€"
                 valueStyle={{ color: '#52c41a' }}
               />
-              <div style={{ color: '#999', fontSize: 12 }}>减少应税收入</div>
+              <div style={{ color: '#999', fontSize: 12 }}>按示例利息 €8,000 估算</div>
             </Card>
           </Col>
         </Row>

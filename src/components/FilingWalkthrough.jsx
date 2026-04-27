@@ -173,7 +173,7 @@ const FilingWalkthrough = () => {
           <div className="info-box" style={{ marginTop: 12 }}>
             <strong>如果预填数据有误怎么办？</strong>
             <p>你可以直接在系统中修改数字。系统可能会标黄提示你"与雇主数据不一致"，
-            但这不影响提交。税务局后续如有疑问会联系你。</p>
+              但这不影响提交。税务局后续如有疑问会联系你。</p>
           </div>
         </div>
       ),
@@ -184,7 +184,7 @@ const FilingWalkthrough = () => {
       children: (
         <div>
           <Alert
-            message="2025 年你有完整一年的房产 + 11 个月房贷利息抵扣，这是主要的减税项"
+            message="2025 年你有完整一年的房产 + 按 ING 年度报告确认的房贷利息抵扣，这是主要的减税项"
             type="success"
             showIcon
             style={{ marginBottom: 12 }}
@@ -229,15 +229,15 @@ const FilingWalkthrough = () => {
               { key: '4', field: 'Type hypotheek', meaning: '房贷类型', value: 'Annuïteitenhypotheek（年金房贷）或 Lineaire hypotheek（线性房贷）', tip: '看你和 ING 签的是哪种' },
               { key: '5', field: 'Schuld 1-1-2025', meaning: '2025.1.1 贷款余额', value: '从 ING Jaaroverzicht 获取', tip: '年初余额' },
               { key: '6', field: 'Schuld 31-12-2025', meaning: '2025.12.31 贷款余额', value: '从 ING Jaaroverzicht 获取', tip: '年末余额' },
-              { key: '7', field: 'Betaalde rente', meaning: '已付利息总额', value: '≈€7,333（从 ING Jaaroverzicht 获取精确值）', tip: '⚠️ 这是最重要的数字，直接决定你的抵扣额！' },
+              { key: '7', field: 'Betaalde rente', meaning: '已付利息总额', value: '从 ING Jaaroverzicht 2025 获取精确值', tip: '⚠️ 这是最重要的数字；2025.2 首期还款可能包含前期结算利息，不要按固定月数手算替代！' },
               { key: '8', field: 'Looptijd in maanden', meaning: '贷款期限（月数）', value: '你的贷款期限，如 360 个月（30 年）', tip: '' },
-              { key: '9', field: 'Begindatum', meaning: '贷款开始日', value: '你的房贷开始日期（2025 年 2 月左右）', tip: '' },
+              { key: '9', field: 'Begindatum', meaning: '贷款开始日', value: '你的房贷合同/放款开始日期（可能是 2024.12 或 ING 文件上的日期）', tip: '以 ING 文件为准，不一定等于首次扣款月份' },
             ]}
           />
 
           <div className="success-box" style={{ marginTop: 12 }}>
             <strong>Eigen Woning 填写完成后的效果：</strong>
-            <p>系统会自动计算：Eigenwoningforfait（+€910）- 房贷利息抵扣（-€7,333）= <strong>净减少应税收入约 €6,423</strong></p>
+            <p>系统会自动计算：Eigenwoningforfait（示例 +€910）- 房贷利息抵扣（按 ING 年度报告实际金额）= <strong>净减少应税收入</strong></p>
           </div>
         </div>
       ),
@@ -280,7 +280,7 @@ const FilingWalkthrough = () => {
           <div className="danger-box" style={{ marginTop: 12 }}>
             <strong>90% 规则自测：</strong>
             <p>如果你在中国没有其他收入（如房租、投资），你的全球收入 100% 来自荷兰工资 → 满足 90% 规则 → 可享受完整的 Heffingskorting。
-            如果你在中国有其他收入，需要计算占比。</p>
+              如果你在中国有其他收入，需要计算占比。</p>
           </div>
         </div>
       ),
@@ -326,7 +326,7 @@ const FilingWalkthrough = () => {
           <div className="info-box" style={{ marginTop: 12 }}>
             <strong>2025 年新选项 — 实际收益率申报：</strong>
             <p>2025 年你可以选择按实际收益率申报 Box 3。系统会自动比较虚拟收益率和实际收益率，
-            选择对你更有利的方案。如果你的荷兰银行存款利息很低，实际收益率可能更划算。</p>
+              选择对你更有利的方案。如果你的荷兰银行存款利息很低，实际收益率可能更划算。</p>
           </div>
         </div>
       ),
@@ -402,8 +402,8 @@ const FilingWalkthrough = () => {
           <div className="success-box" style={{ marginTop: 12 }}>
             <strong>预期结果（基于假设数据）：</strong>
             <p>如果你的情况接近假设（年薪 €70k，房贷 €200k，利率 4%），
-            你应该看到 <strong>退税约 €2,000 - €4,000</strong> 的结果。
-            主要原因：房贷利息抵扣 + 完整 Heffingskorting + 30% Ruling。</p>
+              你应该看到 <strong>退税约 €2,000 - €4,000</strong> 的结果。
+              主要原因：房贷利息抵扣 + 完整 Heffingskorting + 30% Ruling。</p>
           </div>
         </div>
       ),
@@ -470,9 +470,9 @@ const FilingWalkthrough = () => {
           description={
             <div>
               <p>下面按照 Belastingdienst 在线报税系统的<strong>实际页面顺序</strong>，逐步列出每个屏幕需要填写的字段、
-              你应该填什么值、以及操作建议。每个步骤对应系统中的一个页面或模块。</p>
+                你应该填什么值、以及操作建议。每个步骤对应系统中的一个页面或模块。</p>
               <p><strong>准备材料：</strong>Jaaropgaaf 2025、ING 房贷 Jaaroverzicht、WOZ-beschikking 2025、
-              DigiD、2024 年申报副本（参照用）。</p>
+                DigiD、2024 年申报副本（参照用）。</p>
             </div>
           }
           type="info"

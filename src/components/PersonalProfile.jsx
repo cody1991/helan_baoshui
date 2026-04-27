@@ -29,7 +29,7 @@ const PersonalProfile = () => {
             <div>
               <ul style={{ paddingLeft: 20, marginBottom: 0 }}>
                 <li><CheckCircleOutlined style={{ color: '#52c41a', marginRight: 4 }} /> 2025 年是你在荷兰的<strong>第一个完整纳税年度</strong>（全年 365 天），Heffingskorting 不再按比例</li>
-                <li><CheckCircleOutlined style={{ color: '#52c41a', marginRight: 4 }} /> 2025.2 起开始还 ING 房贷，<strong>11 个月利息可在 Box 1 抵扣</strong></li>
+                <li><CheckCircleOutlined style={{ color: '#52c41a', marginRight: 4 }} /> 2025.2 起开始还 ING 房贷，<strong>按 2025 年实际已付利息在 Box 1 抵扣</strong></li>
                 <li><WarningOutlined style={{ color: '#fa8c16', marginRight: 4 }} /> 30% Ruling 在 <strong>2025.12 从 30% 降为 20%</strong>（前 20 个月结束）</li>
                 <li><CheckCircleOutlined style={{ color: '#52c41a', marginRight: 4 }} /> 2024 年已由专人处理报税，2025 年是<strong>第一次自己报税</strong></li>
               </ul>
@@ -59,7 +59,7 @@ const PersonalProfile = () => {
           </Descriptions.Item>
           <Descriptions.Item label="房贷银行">
             <Tag color="orange">ING</Tag>
-            2025.2 起还贷（11 个月利息可抵扣）
+            2025.2 起还贷（首期可能包含购房后前期结算利息）
           </Descriptions.Item>
           <Descriptions.Item label="报税方式">
             <Tag color="blue">自行报税</Tag>
@@ -85,14 +85,13 @@ const PersonalProfile = () => {
           <Col xs={24} sm={8}>
             <Card>
               <Statistic
-                title="房贷利息抵扣月数"
-                value={11}
-                suffix="个月"
+                title="房贷利息抵扣"
+                value="实际金额"
                 prefix={<HomeOutlined />}
-                valueStyle={{ color: '#52c41a' }}
+                valueStyle={{ color: '#52c41a', fontSize: 22 }}
               />
               <div style={{ color: '#999', fontSize: 12, marginTop: 4 }}>
-                2025.2 - 2025.12
+                以 ING Jaaroverzicht 2025 为准
               </div>
             </Card>
           </Col>
@@ -132,7 +131,7 @@ const PersonalProfile = () => {
                 children: (
                   <div>
                     <h4>2025.2 - 开始偿还 ING 房贷</h4>
-                    <p>房贷利息开始产生，可在 Box 1 抵扣</p>
+                    <p>首期还款可能包含 2024.12 购房后至首次扣款前的结算利息；2025 抵扣额以 ING 年度报告的实际已付利息为准</p>
                   </div>
                 ),
               },

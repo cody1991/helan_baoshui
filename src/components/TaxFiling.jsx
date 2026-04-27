@@ -196,7 +196,7 @@ const TaxFiling = () => {
               {
                 key: '3',
                 name: 'Hypotheekrenteaftrek（房贷利息抵扣）',
-                amount: '实际利息金额（≈€7,333）',
+                amount: '实际利息金额（以 ING Jaaroverzicht 2025 为准）',
                 desc: '自住房房贷利息，直接减少 Box 1 应税收入',
               },
             ]}
