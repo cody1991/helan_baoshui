@@ -6,6 +6,7 @@ import {
   ClockCircleOutlined,
   LaptopOutlined,
   CheckCircleOutlined,
+  WarningOutlined,
 } from '@ant-design/icons';
 
 const { Paragraph, Text, Title } = Typography;
@@ -221,6 +222,53 @@ const TaxFiling = () => {
           </span>
         }
       >
+        <Alert
+          message="当前申报状态（基于你的 Belastingdienst 截图）"
+          description={
+            <div>
+              <Row gutter={16}>
+                <Col xs={24} sm={12}>
+                  <div style={{ padding: 12, border: '2px solid #e05206', borderRadius: 6, background: '#fffbf0' }}>
+                    <h4 style={{ margin: '0 0 8px 0', color: '#e05206' }}>2025 年申报</h4>
+                    <p style={{ margin: '4px 0', color: '#e05206', fontWeight: 'bold' }}>
+                      <WarningOutlined style={{ marginRight: 4 }} />
+                      状态：未提交（Aangifte inkomstenbelasting 2025 open staan）
+                    </p>
+                    <p style={{ margin: '4px 0', fontSize: 12 }}>
+                      截止日：2026.5.1（可延至 2026.9.1）
+                    </p>
+                    <p style={{ margin: '4px 0', fontSize: 12 }}>
+                      你现在需要选择 "Openen" 开始填写
+                    </p>
+                  </div>
+                </Col>
+                <Col xs={24} sm={12}>
+                  <div style={{ padding: 12, border: '2px solid #52c41a', borderRadius: 6, background: '#f6ffed' }}>
+                    <h4 style={{ margin: '0 0 8px 0', color: '#52c41a' }}>2024 年申报</h4>
+                    <p style={{ margin: '4px 0', color: '#52c41a', fontWeight: 'bold' }}>
+                      <CheckCircleOutlined style={{ marginRight: 4 }} />
+                      主申报：已提交（Aangifte ver-stuurd）
+                    </p>
+                    <p style={{ margin: '4px 0', fontSize: 12 }}>
+                      但仍有补充申报待完成：
+                    </p>
+                    <ul style={{ margin: '4px 0', paddingLeft: 16, fontSize: 12 }}>
+                      <li>Box 3 实际收益报表</li>
+                      <li>部分时间境外居住者申报表</li>
+                    </ul>
+                  </div>
+                </Col>
+              </Row>
+              <div style={{ marginTop: 8, fontSize: 12, color: '#666' }}>
+                <strong>操作建议：</strong>先完成 2025 年主申报（截止日临近），之后再处理 2024 年的补充申报。
+              </div>
+            </div>
+          }
+          type="warning"
+          showIcon
+          style={{ marginBottom: 16 }}
+        />
+
         <Alert
           message={
             <span>

@@ -67,6 +67,54 @@ const PersonalProfile = () => {
           </Descriptions.Item>
         </Descriptions>
 
+        <Alert
+          style={{ marginTop: 16, marginBottom: 16 }}
+          message="当前申报状态（基于你的 Belastingdienst 截图）"
+          description={
+            <div>
+              <Row gutter={16}>
+                <Col xs={24} sm={12}>
+                  <div style={{ padding: 8, border: '1px solid #d9d9d9', borderRadius: 6 }}>
+                    <h4 style={{ margin: 0, color: '#e05206' }}>2025 年申报</h4>
+                    <p style={{ margin: '4px 0', color: '#e05206' }}>
+                      <strong>状态：未提交</strong>
+                    </p>
+                    <p style={{ margin: '4px 0', fontSize: 12 }}>
+                      Aangifte inkomstenbelasting 2025 open staan
+                    </p>
+                    <p style={{ margin: '4px 0', fontSize: 12 }}>
+                      截止日：2026.5.1（可延至 2026.9.1）
+                    </p>
+                  </div>
+                </Col>
+                <Col xs={24} sm={12}>
+                  <div style={{ padding: 8, border: '1px solid #52c41a', borderRadius: 6 }}>
+                    <h4 style={{ margin: 0, color: '#52c41a' }}>2024 年申报</h4>
+                    <p style={{ margin: '4px 0', color: '#52c41a' }}>
+                      <strong>状态：主申报已提交</strong>
+                    </p>
+                    <p style={{ margin: '4px 0', fontSize: 12 }}>
+                      Aangifte ver-stuurd
+                    </p>
+                    <p style={{ margin: '4px 0', fontSize: 12 }}>
+                      但仍有补充申报待完成
+                    </p>
+                  </div>
+                </Col>
+              </Row>
+              <div style={{ marginTop: 8, fontSize: 12, color: '#666' }}>
+                <strong>2024 年待完成：</strong>
+                <ul style={{ margin: '4px 0', paddingLeft: 16 }}>
+                  <li>Box 3 实际收益报表（opgaaf werkelijk rendement box 3）</li>
+                  <li>部分时间境外居住者申报表</li>
+                </ul>
+              </div>
+            </div>
+          }
+          type="info"
+          showIcon
+        />
+
         <Row gutter={16} style={{ marginTop: 24 }}>
           <Col xs={24} sm={8}>
             <Card>
