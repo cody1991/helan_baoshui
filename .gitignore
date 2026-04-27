@@ -26,3 +26,6 @@ npm-debug.log*
 
 # Vite
 *.local
+
+
+.pre.md
